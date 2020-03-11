@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>School:</strong>
+  <%= @user.school %>
+</p>
+
+<p>
+  <strong>College:</strong>
+  <%= @user.college %>
+</p>
+
+<p>
+  <strong>Passout:</strong>
+  <%= @user.passout %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %> 
+<%= link_to 'Pdf', user_path(@user, format: "pdf") %>
