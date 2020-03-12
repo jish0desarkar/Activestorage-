@@ -22,4 +22,4 @@
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %> 
-<%= link_to 'Pdf', user_path(@user, format: "pdf") %>
+<%= link_to 'Pdf', url_for(@user.pdf) %>
