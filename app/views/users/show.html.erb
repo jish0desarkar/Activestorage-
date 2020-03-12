@@ -1,27 +1,31 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<p class="text-center">
   <strong>Name:</strong>
   <%= @user.name %>
 </p>
 
-<p>
+<p class="text-center">
   <strong>School:</strong>
   <%= @user.school %>
 </p>
 
-<p>
+<p class="text-center">
   <strong>College:</strong>
   <%= @user.college %>
 </p>
 
-<p>
+<p class="text-center">
   <strong>Passout:</strong>
   <%= @user.passout %>
 </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<p class="text-center">
+
+<%= link_to 'Edit', edit_user_path(@user), :class => 'btn btn-success text-center' %> |
+<%= link_to 'Back', users_path, :class => 'btn btn-success text-light' %>
 <% if @user.pdf.attached? %> 
-  <%= link_to 'Pdf', url_for(@user.pdf) %>
+  <%= link_to 'Pdf', url_for(@user.pdf), :class => 'btn btn-success text-light' %>
 <%end%>
+
+</p>
