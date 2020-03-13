@@ -24,6 +24,8 @@
         <td><%= link_to 'Edit', edit_user_path(user), :class => 'btn btn-sm btn-success text-light' %></td>
         <% if user.pdf.attached? %>
           <td><%= link_to 'Pdf', url_for(user.pdf) , :class => 'btn btn-success btn-sm text-light'%></td>
+          <br>
+          <td><%= link_to 'Download', rails_blob_path(user.pdf, disposition: "attachment"), :class => 'btn btn-success btn-sm text-light'%></td>
         <%end%>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } , :class => 'btn btn-danger btn-sm text-light'%></td>
       </tr>
